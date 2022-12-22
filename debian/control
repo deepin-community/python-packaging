@@ -1,0 +1,30 @@
+Source: python-packaging
+Section: python
+Priority: optional
+Maintainer: Matthias Klose <doko@debian.org>
+Build-Depends: debhelper (>= 11),
+  dh-python,
+  python3-all, pypy,
+  python3-pretend, pypy-pretend,
+  python3-pyparsing, pypy-pyparsing,
+  python3-six, pypy-six,
+  python3-pytest,
+  python3-setuptools, pypy-setuptools,
+Standards-Version: 4.6.0
+Homepage: https://pypi.python.org/pypi/packaging
+
+Package: python3-packaging
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: core utilities for python3 packages
+ These core utilities currently consist of:
+  - Version Handling (PEP 440)
+  - Dependency Specification (PEP 440)
+
+Package: pypy-packaging
+Architecture: all
+Depends: ${pypy:Depends}, ${misc:Depends}, pypy-pyparsing
+Description: core utilities for pypy packages
+ These core utilities currently consist of:
+  - Version Handling (PEP 440)
+  - Dependency Specification (PEP 440)
