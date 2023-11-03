@@ -1,11 +1,102 @@
 Changelog
 ---------
 
+23.2 - 2023-10-01
+~~~~~~~~~~~~~~~~~
+
+* Document calendar-based versioning scheme (:issue:`716`)
+* Enforce that the entire marker string is parsed (:issue:`687`)
+* Requirement parsing no longer automatically validates the URL (:issue:`120`)
+* Canonicalize names for requirements comparison (:issue:`644`)
+* Introduce ``metadata.Metadata`` (along with ``metadata.ExceptionGroup`` and ``metadata.InvalidMetadata``; :issue:`570`)
+* Introduce the ``validate`` keyword parameter to ``utils.validate_name()`` (:issue:`570`)
+* Introduce ``utils.is_normalized_name()`` (:issue:`570`)
+* Make ``utils.parse_sdist_filename()`` and ``utils.parse_wheel_filename()``
+  raise ``InvalidSdistFilename`` and ``InvalidWheelFilename``, respectively,
+  when the version component of the name is invalid
+
+23.1 - 2023-04-12
+~~~~~~~~~~~~~~~~~
+
+* Parse raw metadata (:issue:`671`)
+* Import underlying parser functions as an underscored variable (:issue:`663`)
+* Improve error for local version label with unsupported operators (:issue:`675`)
+* Add dedicated error for specifiers with incorrect `.*` suffix
+* Replace spaces in platform names with underscores (:issue:`620`)
+* Relax typing of ``_key`` on ``_BaseVersion`` (:issue:`669`)
+* Handle prefix match with zeros at end of prefix correctly (:issue:`674`)
+
+23.0 - 2023-01-08
+~~~~~~~~~~~~~~~~~
+
+* Allow ``"extra"`` to be ``None`` in the marker environment (:issue:`650`)
+* Refactor ``tags._generic_api`` to use ``EXT_SUFFIX`` (:issue:`607`)
+* Correctly handle trailing whitespace on URL requirements (:issue:`642`)
+* Fix typing for ``specifiers.BaseSpecifier.filter()`` (:issue:`643`)
+* Use stable Python 3.11 in tests (:issue:`641`)
+* Correctly handle non-normalised specifiers in requirements (:issue:`634`)
+* Move to ``src/`` layout (:issue:`626`)
+* Remove ``__about__`` file, in favour of keeping constants in ``__init__`` (:issue:`626`)
+
+22.0 - 2022-12-07
+~~~~~~~~~~~~~~~~~
+
+* Explicitly declare support for Python 3.11 (:issue:`587`)
+* Remove support for Python 3.6 (:issue:`500`)
+* Remove ``LegacySpecifier`` and ``LegacyVersion`` (:issue:`407`)
+* Add ``__hash__`` and ``__eq__`` to ``Requirement`` (:issue:`499`)
+* Add a ``cpNNN-none-any`` tag (:issue:`541`)
+* Adhere to :pep:`685` when evaluating markers with extras (:issue:`545`)
+* Allow accepting locally installed prereleases with ``SpecifierSet``  (:issue:`515`)
+* Allow pre-release versions in marker evaluation (:issue:`523`)
+* Correctly parse ELF for musllinux on Big Endian (:issue:`538`)
+* Document ``packaging.utils.NormalizedName`` (:issue:`565`)
+* Document exceptions raised by functions in ``packaging.utils`` (:issue:`544`)
+* Fix compatible version specifier incorrectly strip trailing ``0`` (:issue:`493`)
+* Fix macOS platform tags with old macOS SDK (:issue:`513`)
+* Forbid prefix version matching on pre-release/post-release segments (:issue:`563`)
+* Normalize specifier version for prefix matching (:issue:`561`)
+* Improve documentation for ``packaging.specifiers`` and ``packaging.version``. (:issue:`572`)
+* ``Marker.evaluate`` will now assume evaluation environment with empty ``extra``.
+  Evaluating markers like ``"extra == 'xyz'"`` without passing any extra in the
+  ``environment`` will no longer raise an exception (:issue:`550`)
+* Remove dependency on ``pyparsing``, by replacing it with a hand-written parser.
+  This package now has no runtime dependencies (:issue:`468`)
+* Update return type hint for ``Specifier.filter`` and ``SpecifierSet.filter``
+  to use ``Iterator`` instead of ``Iterable`` (:issue:`584`)
+
+21.3 - 2021-11-17
+~~~~~~~~~~~~~~~~~
+
+* Add a ``pp3-none-any`` tag (:issue:`311`)
+* Replace the blank pyparsing 3 exclusion with a 3.0.5 exclusion (:issue:`481`, :issue:`486`)
+* Fix a spelling mistake (:issue:`479`)
+
+21.2 - 2021-10-29
+~~~~~~~~~~~~~~~~~
+
+* Update documentation entry for 21.1.
+
+21.1 - 2021-10-29
+~~~~~~~~~~~~~~~~~
+
+* Update pin to pyparsing to exclude 3.0.0.
+
 21.0 - 2021-07-03
 ~~~~~~~~~~~~~~~~~
 
-* `packaging` is now only compatible with Python 3.6 and above.
+* PEP 656: musllinux support (:issue:`411`)
+* Drop support for Python 2.7, Python 3.4 and Python 3.5.
+* Replace distutils usage with sysconfig (:issue:`396`)
 * Add support for zip files in ``parse_sdist_filename`` (:issue:`429`)
+* Use cached ``_hash`` attribute to short-circuit tag equality comparisons (:issue:`417`)
+* Specify the default value for the ``specifier`` argument to ``SpecifierSet`` (:issue:`437`)
+* Proper keyword-only "warn" argument in packaging.tags (:issue:`403`)
+* Correctly remove prerelease suffixes from ~= check (:issue:`366`)
+* Fix type hints for ``Version.post`` and ``Version.dev`` (:issue:`393`)
+* Use typing alias ``UnparsedVersion`` (:issue:`398`)
+* Improve type inference for ``packaging.specifiers.filter()`` (:issue:`430`)
+* Tighten the return type of ``canonicalize_version()`` (:issue:`402`)
 
 20.9 - 2021-01-29
 ~~~~~~~~~~~~~~~~~
@@ -84,7 +175,7 @@ No unreleased changes.
 
 * Officially support Python 3.8 (:issue:`232`)
 
-* Add ``major``, ``minor``, and ``micro`` aliases to ``packaging.version.Version`` (:issue:`226`)
+* Add ``major``, ``minor``, and ``micro`` aliases to ``packaging.version.Version`` (:issue:`225`)
 
 * Properly mark ``packaging`` has being fully typed by adding a `py.typed` file (:issue:`226`)
 
