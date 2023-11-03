@@ -15,6 +15,8 @@ You can install packaging with ``pip``:
 
     $ pip install packaging
 
+The ``packaging`` library uses calendar-based versioning (``YY.N``).
+
 
 .. toctree::
     :maxdepth: 1
@@ -25,6 +27,7 @@ You can install packaging with ``pip``:
     specifiers
     markers
     requirements
+    metadata
     tags
     utils
 

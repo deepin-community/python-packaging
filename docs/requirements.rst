@@ -47,7 +47,22 @@ Usage
     set()
     >>> url_req.marker
     <Marker('os_name == "a"')>
+    >>> # You can do simple comparisons between requirement objects:
+    >>> Requirement("packaging") == Requirement("packaging")
+    True
+    >>> # You can also perform simple comparisons between sets of requirements:
+    >>> requirements1 = {Requirement("packaging"), Requirement("pip")}
+    >>> requirements2 = {Requirement("pip"), Requirement("packaging")}
+    >>> requirements1 == requirements2
+    True
 
+.. versionchanged:: 23.2
+
+    When a requirement is specified with a URL, the :class:`Requirement` class
+    used to check the URL and reject values containing invalid scheme and
+    netloc combinations. This is no longer performed since PEP 508 does not
+    specify such rules, and the check incorrectly disallows valid requirement
+    strings from being parsed.
 
 Reference
 ---------

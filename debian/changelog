@@ -1,3 +1,55 @@
+python-packaging (23.2-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 31 Oct 2023 14:03:32 +0100
+
+python-packaging (23.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bump standards version.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 12 Jun 2023 09:40:57 +0200
+
+python-packaging (23.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 14 Jan 2023 10:55:02 +0100
+
+python-packaging (22.0-2) unstable; urgency=medium
+
+  * Add build dependency on flit.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 26 Dec 2022 12:57:30 +0100
+
+python-packaging (22.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Update build dependencies.
+  * Bump standards version.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 26 Dec 2022 12:25:37 +0100
+
+python-packaging (21.3-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Stop building pypy-packaging (Closes: #1016775)
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 27 Aug 2022 16:53:26 +0200
+
+python-packaging (21.3-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 27 Nov 2021 09:14:41 +0100
+
+python-packaging (21.2-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 17 Nov 2021 17:51:57 +0100
+
 python-packaging (21.0-1) unstable; urgency=medium
 
   * New upstream version.
