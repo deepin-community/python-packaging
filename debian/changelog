@@ -1,3 +1,10 @@
+python-packaging (24.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Drop build dependency on python3-six. Closes: #1064489.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 02 Apr 2024 17:20:50 +0200
+
 python-packaging (23.2-1) unstable; urgency=medium
 
   * New upstream version.

@@ -235,8 +235,7 @@ class TestSpecifier:
 
     @pytest.mark.parametrize(
         ("left", "right", "op"),
-        itertools.chain(
-            *
+        itertools.chain.from_iterable(
             # Verify that the equal (==) operator works correctly
             [[(x, x, operator.eq) for x in SPECIFIERS]]
             +
@@ -260,8 +259,7 @@ class TestSpecifier:
 
     @pytest.mark.parametrize(
         ("left", "right", "op"),
-        itertools.chain(
-            *
+        itertools.chain.from_iterable(
             # Verify that the equal (==) operator works correctly
             [[(x, x, operator.ne) for x in SPECIFIERS]]
             +
@@ -369,6 +367,7 @@ class TestSpecifier:
                 ("2!1.0", "==2!1.*"),
                 ("2!1.0", "==2!1.0"),
                 ("2!1.0", "!=1.0"),
+                ("2!1.0.0", "==2!1.0.0.0.*"),
                 ("2!1.0.0", "==2!1.0.*"),
                 ("2!1.0.0", "==2!1.*"),
                 ("1.0", "!=2!1.0"),
@@ -467,6 +466,8 @@ class TestSpecifier:
                 ("2!1.0", "~=1.0"),
                 ("2!1.0", "==1.0"),
                 ("1.0", "==2!1.0"),
+                ("2!1.0", "==1.0.0.*"),
+                ("1.0", "==2!1.0.0.*"),
                 ("2!1.0", "==1.*"),
                 ("1.0", "==2!1.*"),
                 ("2!1.0", "!=2!1.0"),
@@ -812,8 +813,7 @@ class TestSpecifierSet:
 
     @pytest.mark.parametrize(
         ("left", "right", "op"),
-        itertools.chain(
-            *
+        itertools.chain.from_iterable(
             # Verify that the equal (==) operator works correctly
             [[(x, x, operator.eq) for x in SPECIFIERS]]
             +
@@ -833,8 +833,7 @@ class TestSpecifierSet:
 
     @pytest.mark.parametrize(
         ("left", "right", "op"),
-        itertools.chain(
-            *
+        itertools.chain.from_iterable(
             # Verify that the equal (==) operator works correctly
             [[(x, x, operator.ne) for x in SPECIFIERS]]
             +
