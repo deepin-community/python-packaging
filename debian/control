@@ -8,10 +8,9 @@ Build-Depends: debhelper (>= 11),
   python3-pretend,
   python3-pyparsing,
   python3-pytest,
-  python3-setuptools,
   pybuild-plugin-pyproject,
   flit,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Homepage: https://pypi.python.org/pypi/packaging
 
 Package: python3-packaging
