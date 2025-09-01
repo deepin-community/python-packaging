@@ -4,6 +4,9 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+WHEELS_DIR=$(CURDIR)/debian/python3-packaging-whl/usr/share/python-wheels
+export PYBUILD_NAME=packaging
+export PYBUILD_AFTER_INSTALL=mkdir -p $(WHEELS_DIR) && cp {home_dir}/*.whl $(WHEELS_DIR)
 export PYBUILD_DISABLE_pypy=test
 
 %:

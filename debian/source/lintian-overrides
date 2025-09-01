@@ -1,0 +1,3 @@
+# These are test files, not shipped in any binary package.
+python-packaging source: binary-with-bad-dynamic-table *
+python-packaging source: elf-error *
