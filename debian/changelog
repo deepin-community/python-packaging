@@ -1,3 +1,32 @@
+python-packaging (25.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 26 Apr 2025 09:16:50 -0400
+
+python-packaging (24.2-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 12 Apr 2025 14:50:55 +0300
+
+python-packaging (24.2-2) experimental; urgency=medium
+
+  * Move the package to Debian Python Team.
+    - Set Matthias and myself as Uploaders.
+    - Add Vcs fields.
+  * Add python3-packaging-whl package (needed for python3-wheel-whl).
+  * Update debian/copyright.
+  * Enable autopkgtest using pybuild.
+  * Override Lintian warnings about test data files.
+  * Fix Lintian pypi-homepage warning by pointing Homepage to GitHub.
+  * Update debian/watch version to 4, and use https instead of http.
+  * Update debhelper compat level to 13.
+  * Bump Standards-Version to 4.7.2, no changes needed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 11 Apr 2025 13:08:49 +0300
+
 python-packaging (24.2-1) unstable; urgency=medium
 
   * New upstream version.

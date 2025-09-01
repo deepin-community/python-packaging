@@ -1,2 +1,2 @@
-version=3
-http://pypi.debian.net/packaging/packaging-(.*)\.(?:tar\.gz|zip)
+version=4
+https://pypi.debian.net/packaging/packaging-(.*)\.(?:tar\.gz|zip)
